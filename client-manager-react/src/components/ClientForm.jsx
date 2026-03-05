@@ -6,8 +6,8 @@ export default function ClientForm({
   editingId, cancelEdit 
 }) {
   return (
-    <div className="card shadow-sm mb-4 border-primary">
-      <div className={`card-header text-white ${editingId ? 'bg-warning text-dark fw-bold' : 'bg-primary'}`}>
+    <div className="card shadow-sm mb-4 border-dark">
+      <div className={`card-header text-white ${editingId ? 'bg-warning text-dark fw-bold' : 'red-of'}`}>
         {editingId ? "Editando Ficha de Serviço" : "Nova Ficha de Serviço"}
       </div>
       
@@ -78,7 +78,7 @@ export default function ClientForm({
           {editingId && (
             <button type="button" className="btn btn-secondary px-4 me-2 shadow-sm" onClick={cancelEdit}>Cancelar</button>
           )}
-          <button type="submit" className={`btn ${editingId ? 'btn-warning' : 'btn-success'} px-5 shadow-sm`}>
+          <button type="submit" className={`btn ${editingId ? 'btn-warning' : 'red-of text-white'} px-5 shadow-sm`}>
             {editingId ? "Atualizar Ficha" : "Gravar no Sistema"}
           </button>
         </div>

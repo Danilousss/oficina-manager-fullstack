@@ -5,9 +5,9 @@ export default function SearchBar({
   handleSearch 
 }) {
   return (
-    <div className="row mb-3 g-2">
+    <div className="row mb-3 g-2">  
       <div className="col-md-3">
-        <select className="form-select" value={searchType} 
+        <select className="form-select red-of" value={searchType} 
           onChange={(e) => { setSearchType(e.target.value); setSearchTerm(""); }}>
           <option value="name">Nome</option>
           <option value="placa">Placa</option>
@@ -17,15 +17,15 @@ export default function SearchBar({
       </div>
       <div className="col-md-7">
         {searchType === 'data' ? (
-          <input type="date" className="form-control" value={searchTerm} 
+          <input type="date" className="form-control red-of" value={searchTerm} 
             onChange={(e) => setSearchTerm(e.target.value)} />
         ) : (
-          <input type="text" className="form-control" placeholder="Digite para buscar..." value={searchTerm} 
+          <input type="text" className="form-control red-of" placeholder="Digite para buscar..." value={searchTerm} 
             onChange={(e) => setSearchTerm(e.target.value)} />
         )}
       </div>
       <div className="col-md-2">
-        <button className="btn btn-outline-primary w-100" onClick={handleSearch}>Buscar</button>
+        <button className="btn red-of w-100" onClick={handleSearch}>Buscar</button>
       </div>
     </div>
   );

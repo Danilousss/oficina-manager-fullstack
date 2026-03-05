@@ -3,7 +3,7 @@ function ClientTable({ clients, onEdit, onDelete }) {
   return (
     <div className="table-responsive">
       <table className="table table-hover border">
-        <thead className="table-dark">
+        <thead className="red-of">
           <tr>
             <th>Data</th>
             <th>Cliente</th>
@@ -29,8 +29,8 @@ function ClientTable({ clients, onEdit, onDelete }) {
               {/* Lógica do Badge de Pagamento */}
               <td>
                 <span className={`badge ${
-                  c.formaPagamento === 'Pix' ? 'bg-success' : 
-                  c.formaPagamento === 'Cartão' ? 'bg-primary' : 'bg-secondary'
+                  c.formaPagamento === 'Pix' ? 'bg-primary' : 
+                  c.formaPagamento === 'Cartão' ? 'bg-success' : 'bg-secondary'
                 }`}>
                   {c.formaPagamento || 'Não informado'}
                 </span>
@@ -40,7 +40,7 @@ function ClientTable({ clients, onEdit, onDelete }) {
               <td className="text-center align-middle">
                 <div className="d-flex justify-content-center flex-wrap gap-2">
                   <button 
-                    className="btn btn-sm btn-outline-warning fw-bold" 
+                    className="btn btn-sm btn-outline-dark fw-bold" 
                     style={{ width: '80px' }} 
                     onClick={() => onEdit(c)}
                   >

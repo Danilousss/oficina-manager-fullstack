@@ -131,9 +131,21 @@ function App() {
   }
 
   return (
-    <div className="container mt-4 mb-5">
-      <h2 className="text-center mb-4 text-primary">Gerenciador de Fichas - Oficina</h2>
+    <div className="container mt-4 mb-5"> 
+    <div className='d-flex justify-content-center align-items-center position-relative mb-4 mt-3'>
 
+      <div className='text-center mb-1 text-color'>
+        <h2 className='mb-0'>Rose Pneus</h2>
+        <h4 className='mb-3 text-muted'>Gerenciador de fichas</h4>
+      </div>
+
+      <div className='position-absolute end-0'>
+        <button className='btn btn-outline-red shadow-sm d-flex align-items-center green-of-light'>
+           Painel Financeiro 
+        </button>
+      </div>
+
+    </div>  
       {/* 1. COMPONENTE DE FORMULÁRIO */}
       <ClientForm 
         newClient={newClient} setNewClient={setNewClient}

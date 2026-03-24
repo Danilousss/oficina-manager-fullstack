@@ -8,6 +8,14 @@
     color: white !important;
 }
 
+.btn-outline-green-of-light {
+  color: rgb(138, 159, 91) ; 
+  border-color: rgb(138, 159, 91) ;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
 .form-select.red-of,
 .form-control.red-of{
     background-color: rgb(156, 58, 58);

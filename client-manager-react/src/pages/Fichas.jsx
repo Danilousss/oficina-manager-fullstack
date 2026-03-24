@@ -141,7 +141,7 @@ export default function Fichas() {
       </div>
 
       <div className='position-absolute end-0'>
-        <Link to= "/financeiro"className='btn btn-outline-red shadow-sm d-flex align-items-center green-of-light'>
+        <Link to= "/financeiro"className='btn btn-outline-green-of-light shadow-sm d-flex align-items-center'>
            Painel Financeiro 
         </Link>
       </div>
@@ -155,7 +155,7 @@ export default function Fichas() {
         editingId={editingId} cancelEdit={cancelEdit}
       />
 
-      <div className="card shadow-sm p-3 mb-5">
+      <div className="card shadow-sm p-3 mb-5 border-dark">
         
         {/* 2. COMPONENTE DA BARRA DE BUSCA */}
         <SearchBar 

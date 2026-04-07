@@ -21,7 +21,58 @@ export default function Fichas() {
   const fetchClients = () => {
     clientService.getAll()
       .then(response => setClients(response.data))
-      .catch(error => console.error("Erro ao buscar dados:", error));
+      .catch(error => console.error("API offline - Dados de mostruário",error));
+
+    setClients([
+      {
+      id: 1,
+          name: "João Silva",
+          phone: "(11) 98888-7777",
+          carro: "Honda Civic",
+          placa: "ABC1D23",
+          quilometragem: "85000",
+          serviceDescription: "Troca de 4 pneus Pirelli + Alinhamento e Balanceamento",
+          price: 1850.00,
+          formaPagamento: "Cartão",
+          data: "2026-04-02"
+      },
+      {
+        id: 2,
+          name: "Mariana Costa",
+          phone: "(12) 97777-6666",
+          carro: "Chevrolet Onix",
+          placa: "DEF4G56",
+          quilometragem: "42000",
+          serviceDescription: "Revisão de freios e troca de pastilhas",
+          price: 450.00,
+          formaPagamento: "Pix",
+          data: "2026-04-05"
+      },{
+        id: 3,
+          name: "Ricardo Alves",
+          phone: "(11) 91234-5678",
+          carro: "Toyota Corolla",
+          placa: "GHI7J89",
+          quilometragem: "125000",
+          serviceDescription: "Conserto de pneu furado e rodízio",
+          price: 80.00,
+          formaPagamento: "Dinheiro",
+          data: "2026-04-07"
+      },{
+        id: 4,
+          name: "Cláudia Souza",
+          phone: "(11) 95555-4444",
+          carro: "Jeep Renegade",
+          placa: "JKL0M12",
+          quilometragem: "28000",
+          serviceDescription: "Troca de óleo e filtro + check-up de suspensão",
+          price: 320.00,
+          formaPagamento: "Cartão",
+          data: "2026-04-07"
+      }
+  
+  ])
+
   };
 
   useEffect(() => { fetchClients(); }, []);

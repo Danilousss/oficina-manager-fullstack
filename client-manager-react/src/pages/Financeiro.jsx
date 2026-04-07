@@ -18,8 +18,14 @@ export default function Financeiro() {
   });
 
   const carregarDados = () => {
-    gastoService.getAll().then(res => setGastos(res.data)).catch(err => console.error(err));
-    clientService.getAll().then(res => setFichas(res.data)).catch(err => console.error(err));
+    gastoService.getAll().then(res => setGastos(res.data)).catch(() => setGastos([
+       { id: 1, descricao: 'Compra de estoque', valor: 1200, data: '2026-04-01', categoria: 'PECAS', pago: true },
+       { id: 2, descricao: 'Energia Elétrica', valor: 340, data: '2026-04-05', categoria: 'CONTAS', pago: false }
+    ]));
+
+    clientService.getAll().then(res => setFichas(res.data)).catch(() => setFichas([
+       { price: 1850.00 }, { price: 450.00 }, { price: 80.00 }, { price: 320.00 }
+    ]));
   };
 
   useEffect(() => {

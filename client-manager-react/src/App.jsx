@@ -7,11 +7,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Rota da tela principal de fichas */}
         <Route path="/" 
         element={<Fichas />} />
         
-        {/* Rota da tela da sua mãe */}
         <Route path="/financeiro" 
         element={<Financeiro />} />
       </Routes>

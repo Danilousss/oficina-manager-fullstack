@@ -10,7 +10,6 @@ export default function ClientForm({
         {editingId ? "Editando Ficha de Serviço" : "Nova Ficha de Serviço"}
       </div>
       
-      {/* 1. REMOVIDO o 'noValidate' para permitir os balões de aviso do navegador */}
       <form onSubmit={handleSave} className="card-body row g-3">
         
         <div className="col-md-4">
@@ -67,7 +66,6 @@ export default function ClientForm({
 
         <div className="col-md-3">
           <label className="form-label fw-bold">KM Atual <span className="text-danger">*</span></label>
-          {/* 2. MUDADO PARA type="number" e adicionado 'min="0"' */}
           <input 
             type="number" 
             required 
@@ -82,7 +80,6 @@ export default function ClientForm({
 
         <div className="col-md-3">
           <label className="form-label fw-bold">Valor (R$) <span className="text-danger">*</span></label>
-          {/* 3. MUDADO PARA type="number", adicionado 'step' para centavos e 'min' */}
           <input 
             type="number" 
             required 

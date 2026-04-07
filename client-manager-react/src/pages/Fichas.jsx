@@ -147,7 +147,6 @@ export default function Fichas() {
       </div>
 
     </div>  
-      {/* 1. COMPONENTE DE FORMULÁRIO */}
       <ClientForm 
         newClient={newClient} setNewClient={setNewClient}
         errors={errors} setErrors={setErrors}
@@ -157,23 +156,17 @@ export default function Fichas() {
 
       <div className="card shadow-sm p-3 mb-5 border-dark">
         
-        {/* 2. COMPONENTE DA BARRA DE BUSCA */}
         <SearchBar 
           searchType={searchType} setSearchType={setSearchType}
           searchTerm={searchTerm} setSearchTerm={setSearchTerm}
           handleSearch={handleSearch}
         />
 
-        {/* 3. COMPONENTE DA TABELA */}
         <ClientTable 
           clients={clients} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
-
-        <div className="text-end mt-2">
-          <h4>Total Filtrado: <span className="text-primary">R$ {clients.reduce((acc, curr) => acc + (curr.price || 0), 0).toFixed(2)}</span></h4>
-        </div>
       </div>
     </div>
   );

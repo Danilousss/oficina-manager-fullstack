@@ -19,7 +19,6 @@ function ClientTable({ clients, onEdit, onDelete }) {
           <tbody>
             {clients.map(c => (
               <tr key={c.id}>
-                {/* Lógica de formatação de data preservada */}
                 <td>{c.data ? c.data.split('-').reverse().join('/') : '-'}</td>
                 <td>{c.name}<br/><small className="text-muted">{c.phone}</small></td>
                 <td>{c.carro}<br/><span className="badge bg-info text-dark">{c.placa}</span></td>
@@ -27,7 +26,6 @@ function ClientTable({ clients, onEdit, onDelete }) {
                 <td>{c.serviceDescription}</td>
                 <td className="fw-bold text-success">R$ {c.price?.toFixed(2)}</td>
                 
-                {/* Lógica do Badge de Pagamento */}
                 <td>
                   <span className={`badge ${
                     c.formaPagamento === 'Pix' ? 'bg-primary' : 
@@ -37,7 +35,6 @@ function ClientTable({ clients, onEdit, onDelete }) {
                   </span>
                 </td>
 
-                {/* Botões com tamanhos unificados */}
                 <td className="text-center align-middle">
                   <div className="d-flex justify-content-center flex-wrap gap-2">
                     <button 

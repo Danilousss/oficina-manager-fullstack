@@ -17,7 +17,6 @@ export default function FinanceiroTable({
               <button className="btn btn-sm btn-danger fw-bold" onClick={handleBulkDelete}>
                 Excluir ({selectedIds.length})
               </button>
-              {/* Agora usamos o onCancel que limpa o estado */}
               <button className="btn btn-sm btn-secondary fw-bold" onClick={onCancel}>
                 Cancelar
               </button>
@@ -42,7 +41,6 @@ export default function FinanceiroTable({
             {gastos.map(g => (
               <tr 
                 key={g.id} 
-                // AJUSTE AQUI: A linha só fica vermelha se estiver no modo de exclusão E selecionada
                 className={`${isSelectionMode && selectedIds.includes(g.id) ? "table-danger" : ""} align-middle`}
                 onClick={() => isSelectionMode && toggleSelect(g.id)}
                 style={{ cursor: isSelectionMode ? 'pointer' : 'default' }}
